@@ -10,8 +10,7 @@ for i in li:
 
     ext = ext[1:]
     
-    if ext == "":
-        continue
+    
         
     if os.path.exists( a + '/' + ext ):
         shutil.move( a + '/' + i, a + '/' + ext + '/' + i )
