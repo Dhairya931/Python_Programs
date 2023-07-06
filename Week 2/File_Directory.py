@@ -1,21 +1,21 @@
 import os
 import shutil
 
-dirName = input( 'Enter folder name: ' )
+a = input( 'Enter folder name: ' )
 
-li = os.listdir(dirName)
+li = os.listdir(a)
 
 for i in li:
-    fileName, extension = os.path.splitext(i)
+    fileName, ext = os.path.splitext(i)
 
-    extension = extension[1:]
+    ext = ext[1:]
     
-    if extension == "":
+    if ext== "":
         continue
         
-    if os.path.exists( dirName + '/' + extension ):
-        shutil.move( dirName + '/' + i, dirName + '/' + extension + '/' + i )
+    if os.path.exists( a + '/' + ext ):
+        shutil.move( a + '/' + i, a + '/' + ext + '/' + i )
         
     else:
-        os.makedirs( dirName + '/' + extension )
-        shutil.move( dirName + '/' + i, dirName + '/' + extension + '/' + i )
+        os.makedirs( a + '/' + ext )
+        shutil.move( a + '/' + i, a + '/' + ext + '/' + i )
