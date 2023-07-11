@@ -17,4 +17,4 @@ for j in dic:
     print ("Frequency of ", j, end = " ")
     print (":", end = " ")
     print (dic[j], end = " ")
-    
+    print ()
